@@ -86,7 +86,7 @@ function parseInput(request){
 		Object.keys(request.originalRequest.message.nlp["entities"]).forEach(key => {
 	        var match =  request.originalRequest.message.nlp["entities"][key][0];
 
-	        if(match.confidence > 0.8){
+	        if(match.confidence > 0.7){
 	        	returnValue.nlp = {
 	        		"match" : match._entity,
 	        		"value" : match.value
