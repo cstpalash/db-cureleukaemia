@@ -30,6 +30,16 @@ module.exports = botBuilder(function (request, apiReq) {
 					return haveFun();
 				case "exercise":
 					return exercise();
+				case "fund":
+					return funding();
+				case "weight":
+					return weight();
+				case "whyme":
+					return whyMe();
+				case "hairloss":
+					return hairLoss();
+				case "infection":
+					return infection();
 				case "getstarted":
 				default:
 					return getStarted(profileData);
@@ -58,7 +68,16 @@ module.exports = botBuilder(function (request, apiReq) {
 					return process.env.replyPhoneReceived.replaceAll("{first_name}", profileData.first_name);
 				case "exercise":
 					return exercise();
-						
+				case "fund":
+					return funding();
+				case "weight":
+					return weight();
+				case "whyme":
+					return whyMe();	
+				case "hairloss":
+					return hairLoss();
+				case "infection":
+					return infection();
 			}
 		}
 
@@ -227,7 +246,14 @@ function getExperts(startIndex){
 
 function askMeAnything(){
 	const reply = new fbTemplate.Text(process.env.replyAskMeAnything);
-	reply.addQuickReply('Can I exercise', '#exercise');
+	reply.addQuickReply('Why me?', '#whyme');
+	reply.addQuickReply('Can I exercise?', '#exercise');
+	reply.addQuickReply('Can I raise fund?', '#fund');
+	reply.addQuickReply('Can I gain weight?', '#weight');
+	reply.addQuickReply('Grow hair back?', '#hairloss');
+	reply.addQuickReply('Avoid infection?', '#infection');
+
+	
 
 	return reply.get();
 }
@@ -239,6 +265,70 @@ function exercise(){
 			.addUrl("https://www.leukaemiacare.org.uk/support-and-information/information-about-blood-cancer/living-well-with-leukaemia/exercise/getting-more-active/")
 			.addImage("https://s3.amazonaws.com/cureleukaemia/exercise.png")
 			.addButton("See how", "https://youtu.be/MA00P_l71zQ")
+			.addButton("Talk to experts", "#connecttoexperts|0")
+			.addShareButton();
+
+	return generic.get();
+}
+
+function funding(){
+	const generic = new fbTemplate.Generic();
+
+	generic.addBubble(format("Fund raising"), format("financial support after cancer diagnosis"))
+			.addUrl("https://www.leukaemiacare.org.uk/get-involved/fundraise-for-us/fundraising-ideas")
+			.addImage("https://s3.amazonaws.com/cureleukaemia/fund.png")
+			.addButton("See how", "https://www.leukaemiacare.org.uk/get-involved/fundraise-for-us/fundraising-ideas")
+			.addShareButton();
+
+	return generic.get();
+}
+
+function weight(){
+	const generic = new fbTemplate.Generic();
+
+	generic.addBubble(format("Fight weight loss"), format("after cancer diagnosis"))
+			.addUrl("https://www.cancer.org/latest-news/fighting-weight-gain-in-childhood-leukemia.html")
+			.addImage("https://s3.amazonaws.com/cureleukaemia/weight.png")
+			.addButton("See how", "https://www.cancer.org/latest-news/fighting-weight-gain-in-childhood-leukemia.html")
+			.addButton("Talk to experts", "#connecttoexperts|0")
+			.addShareButton();
+
+	return generic.get();
+}
+
+function whyMe(){
+	const generic = new fbTemplate.Generic();
+
+	generic.addBubble(format("Why me"), format("cancer diagnosis"))
+			.addUrl("https://www.webmd.com/cancer/lymphoma/understanding-leukemia-basics#1")
+			.addImage("https://s3.amazonaws.com/cureleukaemia/why.png")
+			.addButton("More info", "https://www.webmd.com/cancer/lymphoma/understanding-leukemia-basics#1")
+			.addButton("Talk to experts", "#connecttoexperts|0")
+			.addShareButton();
+
+	return generic.get();
+}
+
+function hairLoss(){
+	const generic = new fbTemplate.Generic();
+
+	generic.addBubble(format("Hair loss"), format("after cancer diagnosis"))
+			.addUrl("https://www.leukaemiacare.org.uk/support-and-information/information-about-blood-cancer/living-well-with-leukaemia/appearance/hair-loss/")
+			.addImage("https://s3.amazonaws.com/cureleukaemia/hairloss.png")
+			.addButton("More info", "https://www.leukaemiacare.org.uk/support-and-information/information-about-blood-cancer/living-well-with-leukaemia/appearance/hair-loss/")
+			.addButton("Talk to experts", "#connecttoexperts|0")
+			.addShareButton();
+
+	return generic.get();
+}
+
+function infection(){
+	const generic = new fbTemplate.Generic();
+
+	generic.addBubble(format("Avoid infection"), format("after cancer diagnosis"))
+			.addUrl("https://www.lls.org/treatment/managing-side-effects/infections")
+			.addImage("https://s3.amazonaws.com/cureleukaemia/infection.png")
+			.addButton("More info", "https://www.lls.org/treatment/managing-side-effects/infections")
 			.addButton("Talk to experts", "#connecttoexperts|0")
 			.addShareButton();
 

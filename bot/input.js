@@ -55,6 +55,26 @@ function parseInput(request){
 			cmd["type"] = "exercise";
 		}
 
+		if(payload == "#fund"){
+			cmd["type"] = "fund";
+		}
+
+		if(payload == "#weight"){
+			cmd["type"] = "weight";
+		}
+
+		if(payload == "#whyme"){
+			cmd["type"] = "whyme";
+		}
+
+		if(payload == "#hairloss"){
+			cmd["type"] = "hairloss";
+		}
+
+		if(payload == "#infection"){
+			cmd["type"] = "infection";
+		}
+
 
 		returnValue.command = cmd;
 	}
