@@ -1,0 +1,19 @@
+{
+  "name": "hackBot",
+  "version": "1.0.0",
+  "description": "hackathon bot",
+  "main": "app.js",
+  "scripts": {
+    "create": "claudia create --region ap-south-1 --api-module app --set-env-from-json env.json --configure-fb-bot",
+    "update": "claudia update --region ap-south-1 --set-env-from-json env.json"
+  },
+  "author": "Palash Roy - DB hackathon",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "claudia-bot-builder": "^4.1.0",
+    "dynamodb-doc": "^1.0.0",
+    "https": "^1.0.0",
+    "lodash": "^4.17.10"
+  }
+}

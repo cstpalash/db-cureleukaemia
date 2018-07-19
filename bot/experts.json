@@ -1,0 +1,52 @@
+{
+	"experts" : [
+		{
+			"id" : 0,
+			"name" : "Prof Adele Fielding",
+			"url" : "https://www.uclh.nhs.uk/OurServices/Consultants/Pages/ProfAdeleFielding.aspx",
+			"bio" : "Consultant Haematologist @UCLH",
+			"pic" : "https://s3.amazonaws.com/cureleukaemia/adele.png",
+			"handle" : "https://m.me/utkarsh.manawat"
+		},
+		{
+			"id" : 1,
+			"name" : "Dr Rajeev Gupta",
+			"url" : "https://www.uclh.nhs.uk/OurServices/Consultants/Pages/DrRajeevGupta.aspx",
+			"bio" : "Consultant Haematologist @UCLH",
+			"pic" : "https://s3.amazonaws.com/cureleukaemia/rajeev.png",
+			"handle" : "https://m.me/grb47"
+		},
+		{
+			"id" : 2,
+			"name" : "Prof Asim Khwaja",
+			"url" : "https://www.uclh.nhs.uk/OurServices/Consultants/Pages/ProfAsimKhwaja.aspx",
+			"bio" : "Consultant Haematologist @UCLH",
+			"pic" : "https://s3.amazonaws.com/cureleukaemia/asim.png",
+			"handle" : "https://m.me/AKKU.NE.953094"
+		},
+		{
+			"id" : 3,
+			"name" : "Dr Panagiotis Kottaridis",
+			"url" : "https://hcahealthcareukatuch.com/expert-team/dr-panagiotis-kottaridis/",
+			"bio" : "Consultant Haematologist @UCLH",
+			"pic" : "https://s3.amazonaws.com/cureleukaemia/panos.png",
+			"handle" : "https://m.me/grb47"
+		},
+		{
+			"id" : 4,
+			"name" : "Dr Marc Mansour",
+			"url" : "https://www.uclh.nhs.uk/OurServices/Consultants/Pages/DrMarcMansour.aspx",
+			"bio" : "Consultant Haematologist @UCLH",
+			"pic" : "https://s3.amazonaws.com/cureleukaemia/marc.png",
+			"handle" : "https://m.me/utkarsh.manawat"
+		},
+		{
+			"id" : 5,
+			"name" : "Dr Beth Payne",
+			"url" : "https://www.uclh.nhs.uk/OurServices/Consultants/Pages/DrBethPayne.aspx",
+			"bio" : "Consultant Haematologist @UCLH",
+			"pic" : "https://s3.amazonaws.com/cureleukaemia/beth.png",
+			"handle" : "https://m.me/AKKU.NE.953094"
+		}
+	]
+}

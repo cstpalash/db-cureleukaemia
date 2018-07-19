@@ -1,0 +1,11 @@
+{
+  "lambda": {
+    "role": "hackBot-executor",
+    "name": "hackBot",
+    "region": "ap-south-1"
+  },
+  "api": {
+    "id": "eb8kg5mgs1",
+    "module": "app"
+  }
+}
